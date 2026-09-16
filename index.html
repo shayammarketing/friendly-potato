@@ -1,0 +1,15 @@
+<!-- DEEPAK WADHWA - ANTI FAKE CLICK LANDING PAGE -->
+<button id="joinBtn" disabled>Loading...</button>
+
+<script>
+let btn = document.getElementById('joinBtn');
+setTimeout(()=>{ btn.disabled=false; btn.innerText="JOIN FREE NOW - Today 8 PM"; }, 5000);
+
+btn.addEventListener('click', function() {
+  if(btn.dataset.clicked) return; // rokega double click
+  btn.dataset.clicked = "1";
+  btn.innerText = "Please Wait...";
+  // Yahan aapka WhatsApp/Telegram link dalo
+  window.location.href = "https://t.me/+shz3zvWeLEJiMmFl";
+});
+</script>
