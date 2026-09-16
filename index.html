@@ -1,15 +1,39 @@
-<!-- DEEPAK WADHWA - ANTI FAKE CLICK LANDING PAGE -->
-<button id="joinBtn" disabled>Loading...</button>
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deepak Wadhwa Masterclass</title>
+<style>
+body{margin:0;background:#020d1f;color:#fff;font-family:Arial;text-align:center}
+.hero{max-width:480px;margin:auto;padding:20px}
+.photo{width:220px;height:220px;border-radius:50%;border:5px solid #00e5ff}
+.btn{background:#00e5ff;color:#000;padding:18px;width:100%;border-radius:50px;font-size:20px;font-weight:bold;border:none}
+.btn:disabled{background:#555}
+</style>
+</head>
+<body>
+<div class="hero">
+<img class="photo" src="deepak.jpg">
+<h1>FREE STOCK MARKET MASTERCLASS</h1>
+<p style="color:#00e5ff">5 Powerful Concepts</p>
+<p>With <b>Deepak Wadhwa</b> - Trader & Mentor</p>
+<div style="text-align:left;background:rgba(255,255,255,0.1);padding:15px;border-radius:10px">
+✓ Chart Basics<br>✓ Trend Identification<br>✓ Risk Management<br>✓ Practical + Live Q&A
+</div><br>
+<button id="joinBtn" class="btn" disabled>Verifying... 5 Sec</button>
+<p style="font-size:11px;color:#aaa">Educational Only<br>t.me/+shz3zvWeLEJiMmFl</p>
+</div>
 <script>
-let btn = document.getElementById('joinBtn');
-setTimeout(()=>{ btn.disabled=false; btn.innerText="JOIN FREE NOW - Today 8 PM"; }, 5000);
-
-btn.addEventListener('click', function() {
-  if(btn.dataset.clicked) return; // rokega double click
-  btn.dataset.clicked = "1";
-  btn.innerText = "Please Wait...";
-  // Yahan aapka WhatsApp/Telegram link dalo
-  window.location.href = "https://t.me/+shz3zvWeLEJiMmFl";
-});
+let btn=document.getElementById('joinBtn');
+let start=Date.now();
+setTimeout(()=>{btn.disabled=false;btn.innerText="JOIN TELEGRAM NOW";},5000);
+btn.onclick=()=>{
+ if(Date.now()-start<6000) return;
+ if(btn.dataset.c) return;
+ btn.dataset.c=1;
+ btn.innerText="Redirecting...";
+ setTimeout(()=>{window.location.href="https://t.me/+shz3zvWeLEJiMmFl";},800);
+}
 </script>
+</body>
+</html>
